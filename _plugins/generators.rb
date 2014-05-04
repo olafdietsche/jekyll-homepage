@@ -1,5 +1,3 @@
-require 'jekyll/post'
-
 module MyJekyllPlugins
     module Generators
         class MonthlyArchive < Jekyll::Generator
