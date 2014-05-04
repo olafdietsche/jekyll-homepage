@@ -1,9 +1,9 @@
 module MyJekyllPlugins
     module Generators
         class MonthlyArchive < Jekyll::Generator
-	    def monthly_archive_list(site)
+            def monthly_archive_list(site)
                 site.posts.each.group_by{|post| Date.new(post.date.year, post.date.month)}
-	    end
+            end
 
             def generate(site)
                 archive = monthly_archive_list(site)
@@ -46,7 +46,7 @@ module MyJekyllPlugins
                           'layout' => layout,
                           'title' => '%04d-%02d' % [date.year, date.month],
                           'posts' => posts,
-                          'content' => '{% for post in page.posts %}<li><a href="{{ post.url }}"><span>{{ post.title }}<span></a></li>
+                          'content' => '{% for post in page.posts %}<li><a href="{{ site.url }}{{ post.url }}"><span>{{ post.title }}<span></a></li>
 {% endfor %}',
                           'date' => date,
                       })
@@ -61,7 +61,7 @@ module MyJekyllPlugins
                           'layout' => layout,
                           'title' => "#{tag}",
                           'posts' => posts,
-                          'content' => '{% for post in page.posts %}<li><a href="{{ post.url }}"><span>{{ post.title }}<span></a></li>
+                          'content' => '{% for post in page.posts %}<li><a href="{{ site.url }}{{ post.url }}"><span>{{ post.title }}<span></a></li>
 {% endfor %}',
                           'tag' => tag
                       })

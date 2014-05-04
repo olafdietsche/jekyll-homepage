@@ -2,30 +2,32 @@
 <html>
     <head>
         <title>{{ page.title }} - {{ site.name }}</title>
-	<meta charset="utf-8">
-	<meta name="author" content="Olaf Dietsche">
-        <link type="text/css" rel="stylesheet" href="/files/css/style.css"/>
+        <meta charset="utf-8">
+        <meta name="author" content="Olaf Dietsche">
+        <link rel="shortcut icon" href="{{ site.url }}/images/favicon.png" type="image/png"/>
+        <link rel="canonical" href="{{ site.url }}{{ page.url | remove: 'index.html' | remove: '.html' }}"/>
+        <link rel="stylesheet" href="{{ site.url }}/css/style.css" type="text/css"/>
     </head>
     <body>
         <div id="container">
             <div id="header-wrapper">
                 <div id="header">
-	            {% include header.html %}
+                    {% include header.html %}
                 </div>
             </div>
             <div id="main-wrapper" class="clearfix">
                 <div id="main">
                     <div id="content" class="column">
-	                {{ content }}
+                        {{ content }}
                     </div>
                     <div id="sidebar" class="column">
-	                {% include sidebar.html %}
+                        {% include sidebar.html %}
                     </div>
                 </div>
             </div>
             <div id="footer-wrapper">
                 <div id="footer">
-	            {% include footer.html %}
+                    {% include footer.html %}
                 </div>
             </div>
         </div>
