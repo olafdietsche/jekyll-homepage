@@ -1,0 +1,10 @@
+# Don't show directory listings for URLs which map to a directory.
+Options -Indexes
+
+RewriteEngine on
+
+RewriteBase /
+
+# Clean URLs
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^ %{REQUEST_FILENAME}.html [L]
