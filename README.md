@@ -20,3 +20,15 @@ The features I needed were a sidebar with a monthly archive and a tag
 archive. I also wanted monthly and tag archive pages. Finally, I added
 some filters and a template for a files section at the end of some of
 my pages.
+
+## Acknowledgment
+
+The plugins were inspired by 
+
+[Monthly archive plugin for Jekyll](https://github.com/shigeya/jekyll-monthly-archive-plugin)
+
+which in turn is based on 
+
+- https://gist.github.com/ilkka/707909
+- https://gist.github.com/ilkka/707020
+- https://gist.github.com/nlindley/6409459
