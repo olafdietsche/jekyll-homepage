@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{ page.title }} - {{ site.name }}</title>
+	<meta charset="utf-8">
+	<meta name="author" content="Olaf Dietsche">
+        <link type="text/css" rel="stylesheet" href="/files/css/style.css"/>
+    </head>
+    <body>
+        <div id="container">
+            <div id="header-wrapper">
+                <div id="header">
+	            {% include header.html %}
+                </div>
+            </div>
+            <div id="main-wrapper" class="clearfix">
+                <div id="main">
+                    <div id="content" class="column">
+	                {{ content }}
+                    </div>
+                    <div id="sidebar" class="column">
+	                {% include sidebar.html %}
+                    </div>
+                </div>
+            </div>
+            <div id="footer-wrapper">
+                <div id="footer">
+	            {% include footer.html %}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

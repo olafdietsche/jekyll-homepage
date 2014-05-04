@@ -1,0 +1,18 @@
+<div class="block">
+    <h3>Monthly Archive</h3>
+    <ul>
+        {% for entry in site.monthly_archive_list %}
+        {% assign month = entry.first %}
+        <li><a href="{{ site.url }}/{{ month | date: '%Y/%m' }}">{{ month | date: '%Y-%m' }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+
+<div class="block">
+    <h3>Tags</h3>
+    <ul>
+        {% for tag in site.tags_archive_list %}
+        <li><a href="{{ site.url }}/tags/{{ tag }}">{{ tag }}</a></li>
+        {% endfor %}
+    </ul>
+</div>

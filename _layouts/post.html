@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<div class="post">
+    <h1 class="page-title">{{ page.title }}</h1>
+    <div class="meta">Submitted by {{ site.author }} on {{ page.date | date: "%Y-%m-%d" }}</div>
+    <div class="meta">Tags:
+        {% for tag in page.tags %}
+        <a href="{{ site.url }}/tags/{{ tag }}">{{ tag }}</a>
+        {% endfor %}
+    </div>
+
+    {{ content }}
+
+    {% if page.files %}
+    {% include files.html %}
+    {% endif %}
+</div>

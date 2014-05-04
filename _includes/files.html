@@ -1,0 +1,14 @@
+<table>
+    <thead>
+        <tr><th>File</th><th>Date</th><th>Size</th></tr>
+    </thead>
+    <tbody>
+        {% for file in page.file_list %}
+        <tr class="{% cycle 'odd', 'even' %}">
+            <td><a href="{{ site.url }}/{{ file[0] }}">{{ file[0] | basename }}</a></td>
+            <td>{{ file[1] | date: '%Y-%m-%d %H:%M'}}</td>
+            <td>{{ file[2] | filesize }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
