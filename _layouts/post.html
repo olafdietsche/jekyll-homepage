@@ -4,6 +4,9 @@ layout: default
 <div class="post">
     <h1 class="page-title">{{ page.title }}</h1>
     <div class="meta">Submitted by {{ site.author }} on {{ page.date | date: "%Y-%m-%d" }}</div>
+    {% if page.last-modified-at %}
+    <div class="meta">Last modified at {{ page.last-modified-at | date: "%Y-%m-%d" }}</div>
+    {% endif %}
     <div class="meta">Tags:
         {% for tag in page.tags %}
         <a href="{{ site.url }}/tags/{{ tag }}">{{ tag }}</a>
