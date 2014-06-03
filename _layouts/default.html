@@ -7,6 +7,14 @@
         <link rel="shortcut icon" href="{{ site.url }}/images/favicon.png" type="image/png"/>
         <link rel="canonical" href="{{ site.url }}{{ page.url | remove: 'index.html' | remove: '.html' }}"/>
         <link rel="stylesheet" href="{{ site.url }}/css/style.css" type="text/css"/>
+        {% if page.css %}
+        <link rel="stylesheet" type="text/css" href="{{ site.url }}/css/{{ page.css }}.css" />
+        {% endif %}
+        {% if page.style %}
+        <style type="text/css">
+            {{ page.style }}
+        </style>
+        {% endif %}
     </head>
     <body>
         <div id="container">
